@@ -174,7 +174,7 @@ document.write("<div class='iFeatured'><a  href="
 if (showlabel == 'on'){ 
 document.write("<span class='itag'>" 
 +ListTag + 
-"target='_blank'</span>"); 
+"</span>"); 
 } 
 document.write("<a class='title' href=" 
 + ListUrl+ 
@@ -205,7 +205,7 @@ document.write("<div class='icontent'>"
 } 
 document.write("</div></li>");
 }if (showTotal == 'on'){ 
-document.write("<div class='itotal'><span> <a href='"+ListBlogLink+"/search/label/"+ListLabel+"'>View all <font>"+TotalPosts+"</font> posts in  →  " +ListLabel+" </a></span></div>"); 
+document.write("<div class='itotal'><span> <a href='"+ListBlogLink+"/search/label/"+ListLabel+"'target='_blank'>View all <font>"+TotalPosts+"</font> posts in  →  " +ListLabel+" </a></span></div>"); 
 } 
 document.write("</ul>"); 
 }
