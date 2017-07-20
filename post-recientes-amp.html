@@ -48,7 +48,7 @@
 .adbstyle .icomments:before {content:'\f086';} 
 .adbstyle .idate:before {content:'\f017';} 
 .adbstyle .iedit:before {content:'\f040';}.adbstyle .imore {font-size:12px; font-weight:bold; text-decoration:none; color:#999;}.adbstyle .itotal {color:#333;  padding:5px 10px; border:1px solid #eee;}.adbstyle .itotal a {font-family:oswald; font-size:12px; font-weight:normal; color:#0080ff; text-decoration:none}.adbstyle .itotal span:before {content:'\f07c';}.adbstyle .itotal span font {padding:0px 3px; color:#333; font-family:georgia; font-size:15px; font-weight:bold}#mbtloading1{ margin: 20% auto; 
-background: url('https://4.bp.blogspot.com/-ZuXp_LG11vQ/WXAeswmyobI/AAAAAAAAAdw/2iFs6T3DSRw1ulSB3-3iuKgaOATDHPzegCLcBGAs/s1600/img-f.gif') no-repeat left center;width: 80px;height: 80px;}
+background: url('https://3.bp.blogspot.com/-6sQN95-4B8I/WXEPq4d0FeI/AAAAAAAAAeA/rvYc7weRCYsgzT2jp2qIvXSPxRea60hjgCLcBGAs/s1600/blogger.png') no-repeat left center;width: 80px;height: 80px;}
 	
 </style>	
 
@@ -76,20 +76,20 @@ var ListBlogLink = getQueryVariable("url");
 	
 <div id="widgetpostrecent" ></div> 
 <script type="text/javascript">
-//#################### Defaults 
+//
 var ListBlogLink = window.location.hostname; 
 var ListCount = 4; 
 var ChrCount = 150; 
 var TitleCount = 66; 
 var ImageSize = 200; 
-//################ Function Start 
+
 function adbstyle(json) { 
 document.write('<ul class="adbstyle">'); 
 for (var i = 0; i < ListCount; i++) 
 { 
-//################### Variables Declared 
+
 var listing= ListImage = ListUrl = ListTitle = ListImage = ListContent = ListConten = ListAuthor = ListTag = ListDate = ListUpdate = ListComments = thumbUrl = TotalPosts = sk = ListMonth = Y = D = M = m = YY = DD = MM = mm = TT =  "";
-//################### Category 
+
 if (json.feed.entry[i].category != null) 
 { 
 for (var k = 0; k < json.feed.entry[i].category.length; k++) { 
@@ -98,14 +98,14 @@ if(k < json.feed.entry[i].category.length-1)
 { ListTag += ", ";} 
 } 
 }
-//################### URL 
+
 for (var j = 0; j < json.feed.entry[i].link.length; j++) { 
       if (json.feed.entry[i].link[j].rel == 'alternate') { 
         break; 
       } 
     } 
 ListUrl= "'" + json.feed.entry[i].link[j].href + "'";
-//################### Info 
+
 TotalPosts = json.feed.openSearch$totalResults.$t; 
 if (json.feed.entry[i].title!= null) 
 { 
@@ -117,10 +117,10 @@ ListComments= json.feed.entry[i].thr$total.$t;
 } 
 ListAuthor= json.feed.entry[i].author[0].name.$t.split(" "); 
 ListAuthor=ListAuthor.slice(0, 1).join(" ");
-//################### Content Check
+
 ListConten = json.feed.entry[i].content.$t; 
 ListContent= ListConten.replace(/(<([^>]+)>)/ig,"").substring(0, ChrCount);
-//################### Date Format
+
 ListMonth= ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 ListDate= json.feed.entry[i].published.$t.substring(0,10);
                          Y = ListDate.substring(0, 4); 
@@ -133,8 +133,8 @@ ListUpdate= json.feed.entry[i].updated.$t.substring(0, 16);
                          DD = ListUpdate.substring(8, 10); 
                          TT = ListUpdate.substring(11, 16); 
                          MM = ListMonth[parseInt(mm - 1)];   
-//################### Thumbnail Check 
-// YouTube scan
+
+
 if (json.feed.entry[i].content.$t.match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/) != null) 
 {
     var youtube_id = json.feed.entry[i].content.$t.match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/).pop(); 
@@ -151,14 +151,14 @@ ListImage= "'" + sk.replace("?imgmax=800","") + "'";
 }
 else if (json.feed.entry[i].content.$t.match(/src=(.+?[\.jpg|\.gif|\.png]")/) != null) 
 { 
-// Support For 3rd Party Images 
+
 ListImage =  json.feed.entry[i].content.$t.match(/src=(.+?[\.jpg|\.gif|\.png]")/)[1]; 
 } 
 else 
 { 
-ListImage= "'https://4.bp.blogspot.com/-ZuXp_LG11vQ/WXAeswmyobI/AAAAAAAAAdw/2iFs6T3DSRw1ulSB3-3iuKgaOATDHPzegCLcBGAs/s1600/img-f.gif'"; 
+ListImage= "'https://3.bp.blogspot.com/-6sQN95-4B8I/WXEPq4d0FeI/AAAAAAAAAeA/rvYc7weRCYsgzT2jp2qIvXSPxRea60hjgCLcBGAs/s1600/blogger.png'"; 
 } 
-//################### Printing List
+
 var listing = "<li class='node"+[i]+"' ><a href=" 
 + ListUrl+ 
   "target='_blank'><img src=" 
@@ -169,9 +169,7 @@ var listing = "<li class='node"+[i]+"' ><a href="
 + ListTitle+ 
 "</a> <span class='icon'>" 
 +ListContent+ 
-" ...  <a href=" 
-+ListUrl+ 
-" class='imore'>more »</a></span><div class='iline'><span class='iauthor'>" 
+" </span><div class='iline'><span class='iauthor'>" 
 +ListAuthor+ 
 "</span><span class='itag'>" 
 +ListTag+ 
