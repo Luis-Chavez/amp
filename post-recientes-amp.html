@@ -74,17 +74,17 @@ var ListBlogLink = getQueryVariable("url");
 </script>
   
 	
-	<div id="mbtloading1" ></div> 
+<div id="widgetpostrecent" ></div> 
 <script type="text/javascript">
 //#################### Defaults 
 var ListBlogLink = window.location.hostname; 
-var ListCount = 5; 
+var ListCount = 4; 
 var ChrCount = 150; 
 var TitleCount = 66; 
 var ImageSize = 200; 
 //################ Function Start 
-function mbtlist(json) { 
-document.write('<ul class="mbtlist">'); 
+function adbstyle(json) { 
+document.write('<ul class="adbstyle">'); 
 for (var i = 0; i < ListCount; i++) 
 { 
 //################### Variables Declared 
@@ -156,14 +156,14 @@ ListImage =  json.feed.entry[i].content.$t.match(/src=(.+?[\.jpg|\.gif|\.png]")/
 } 
 else 
 { 
-ListImage= "'http://4.bp.blogspot.com/-HALLtgFeep0/VfryhQ0C5oI/AAAAAAAAPcY/77mSGND4q84/s200/Icon.png'"; 
+ListImage= "'https://4.bp.blogspot.com/-ZuXp_LG11vQ/WXAeswmyobI/AAAAAAAAAdw/2iFs6T3DSRw1ulSB3-3iuKgaOATDHPzegCLcBGAs/s1600/img-f.gif'"; 
 } 
 //################### Printing List
 var listing = "<li class='node"+[i]+"' ><a href=" 
 + ListUrl+ 
   "><img src=" 
 +ListImage+ 
-"/></a><a class='mbttitle' href=" 
+"/></a><a class='title' href=" 
 + ListUrl+ 
 "target='_blank'>" 
 + ListTitle+ 
@@ -183,13 +183,13 @@ document.write("<div class='itotal'><span> <a href='"+ListBlogLink+"/search'>Vie
 </script>
 <script> 
 var ListBlogLink = getQueryVariable("url");
-var ListCount = 5; 
+var ListCount = 4; 
 </script>
 <script> 
-document.write("<script src='"+ListBlogLink+"/feeds/posts/default?alt=json-in-script&callback=mbtlist'></"+"script>"); 
+document.write("<script src='"+ListBlogLink+"/feeds/posts/default?alt=json-in-script&callback=adbstyle'></"+"script>"); 
 </script>
 <script> 
-document.getElementById("mbtloading1").style.display = "none";</script>
+document.getElementById("widgetpostrecent").style.display = "none";</script>
 	
 	
 	
