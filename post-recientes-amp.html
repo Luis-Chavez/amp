@@ -159,26 +159,15 @@ else
 ListImage= "'https://4.bp.blogspot.com/-ZuXp_LG11vQ/WXAeswmyobI/AAAAAAAAAdw/2iFs6T3DSRw1ulSB3-3iuKgaOATDHPzegCLcBGAs/s1600/img-f.gif'"; 
 } 
 //################### Printing List
-var listing = "<li class='node"+[i]+"' ><a href=" 
-+ ListUrl+ 
-  "><img src=" 
-+ListImage+ 
-"/></a><a class='title' href=" 
-+ ListUrl+ 
-"target='_blank'>" 
-+ ListTitle+ 
-"</a> <span class='icon'>" 
-+ListContent+ 
-" ...  <a href=" 
-+ListUrl+ 
-" class='imore'>more »</a></span><div class='iline'><span class='iauthor'>" 
-+ListAuthor+ 
-"</span><span class='itag'>" 
-+ListTag+ 
-"</span></a> </span></div></li>"; 
+var listing = "<li class='node"+[i]+"' ><a href=" + ListUrl+ " target='_blank'><img src=" +ListImage+ "/></a>
+<a class='title' href=" + ListUrl+ " target='_blank'> " + ListTitle+" </a> 
+<span class='icon'>" +ListContent+ " </span>
+<div class='iline'>
+<span class='iauthor'>"+ListAuthor+"</span>
+<span class='itag'>" +ListTag+ "</span></a> </span></div></li>"; 
 document.write(listing); 
 } 
-document.write("<div class='itotal'><span> <a href='"+ListBlogLink+"/search'>View all <font>"+TotalPosts+"</font> posts</a></span></div></ul>"); 
+document.write("<div class='itotal'><span> <a href='"+ListBlogLink+"/search' target='_blank'>View all <font>"+TotalPosts+"</font> posts</a></span></div></ul>"); 
 } 
 </script>
 <script> 
