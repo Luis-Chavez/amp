@@ -61,7 +61,9 @@ float: none; display: inline-block; margin:0px 0px 0px 0px; padding-right:3px; p
 .adbstyle .itotal a {font-family:oswald, arial; font-size:12px; font-weight:normal; color:#0080ff; text-decoration:none} 
 .adbstyle .itotal span:before {content:'\f07c';} 
 .adbstyle .itotal span font {padding:0px 3px; color:#333; font-family:georgia; font-size:15px; font-weight:bold} 
-	
+	.itag{
+	display:none;
+	}	
 </style>
 
 </head>
@@ -161,7 +163,7 @@ ListImage =  json.feed.entry[i].content.$t.match(/src=(.+?[\.jpg|\.gif|\.png]")/
 }
 else 
 { 
-ListImage= "'https://4.bp.blogspot.com/-ZuXp_LG11vQ/WXAeswmyobI/AAAAAAAAAdw/2iFs6T3DSRw1ulSB3-3iuKgaOATDHPzegCLcBGAs/s1600/img-f.gif'"; 
+ListImage= "'https://3.bp.blogspot.com/-6sQN95-4B8I/WXEPq4d0FeI/AAAAAAAAAeA/rvYc7weRCYsgzT2jp2qIvXSPxRea60hjgCLcBGAs/s1600/blogger.png'"; 
 } 
 document.write( "<li class='node"+[i]+"' >"); 
 if (showthumbnail == 'on'){ 
@@ -209,7 +211,7 @@ document.write("<div class='itotal'><span> <a href='"+ListBlogLink+"/search/labe
 } 
 document.write("</ul>"); 
 }
-document.write("<script src='"+ListBlogLink+"/feeds/posts/default/-/"+ListLabel+"target='_blank'?alt=json-in-script&callback=adbstyle'></"+"script>"); 
+document.write("<script src='"+ListBlogLink+"/feeds/posts/default/-/"+ListLabel+"?alt=json-in-script&callback=adbstyle'></"+"script>"); 
 </script>
   
 	
